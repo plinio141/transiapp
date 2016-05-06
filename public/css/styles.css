@@ -1,0 +1,181 @@
+body {
+  margin: 0 auto;
+  width: 70%;
+  font-family: Tahoma;
+}
+.header {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background: #49B7BC;
+  display: block;
+  font-size: 100px;
+}
+.header .logo-app {
+  width: 120px;
+  height: 120px;
+  float: right;
+}
+.header .logo-empresa {
+  width: 270px;
+  height: 120px;
+  float: left;
+}
+.header li {
+  display: inline;
+}
+.header .title {
+  color: #FOF22A;
+}
+.page {
+  display: flex;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+.page .slider {
+  width: 18%;
+  border-left: 2px solid;
+  border-right: 2px solid;
+}
+.page .slider ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.page .content {
+  width: 80%;
+}
+.page .slider {
+  font-size: 20px;
+  text-align: center;
+}
+.page .slider a {
+  color: black ;
+}
+.page .active {
+  background: #F0F22A;
+}
+.page .sesion {
+  float: right;
+}
+form {
+  font-size: 18px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+}
+form div {
+  width: 80%;
+  padding: 10px 0px 10px 0px;
+}
+form input {
+  width: 100%;
+  height: 25px;
+  border: 2px solid;
+}
+form label {
+  width: 100%;
+}
+form .check {
+  width: auto;
+}
+form .bus {
+  padding: 5px;
+  width: 80%;
+}
+form .bus select {
+  float: right;
+  width: 40%;
+}
+form .ubicacion label {
+  width: 80%;
+}
+form .ubicacion button {
+  float: right;
+}
+form .asignar-bus label {
+  width: 60%;
+}
+form .asignar-bus select {
+  float: right;
+}
+form .group-button {
+  text-align: center;
+}
+form .check input {
+  width: 20%;
+}
+form .check label {
+  width: 60%;
+}
+.login {
+  background: #49B7BC;
+  width: 100%;
+  display: flex;
+  padding-top: 30px;
+}
+.login .text-login {
+  width: 20%;
+  font-size: 100px;
+  color: white;
+  padding-left: 50px;
+}
+.login .text-login h1 {
+  width: 100%;
+}
+.login .center-login {
+  padding-top: 70px;
+  width: 60%;
+  margin: 0 auto;
+}
+.login .center-login img {
+  width: 100%;
+}
+.login .center-login .logo {
+  width: 25%;
+  margin: 0 auto;
+}
+.login .center-login .logo img {
+  width: 100%;
+}
+.login .center-login .form {
+  width: 50%;
+  background: white;
+  margin: 0 auto;
+}
+.login .center-login .form .form-login {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+.login .center-login .form .form-login div {
+  margin: 0 auto;
+}
+.login .center-login .form .form-login .div-submit {
+  text-align: center;
+}
+.login .center-login .form .form-login .div-submit .submit {
+  width: 50%;
+  height: 50px;
+  background: #49B7BC;
+  border: 2px solid black;
+  color: white;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.login .center-login .form .form-login .input {
+  width: 80%;
+}
+.login .empresa-login {
+  width: 20%;
+}
+.login .empresa-login img {
+  width: 100%;
+}
+table {
+  margin: 1px solid;
+}
+table tr {
+  margin: 1px solid !important;
+}
