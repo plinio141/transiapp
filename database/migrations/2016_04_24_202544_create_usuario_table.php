@@ -15,7 +15,8 @@ class CreateUsuarioTable extends Migration
         Schema::create('Usuarios', function (Blueprint $table) {
             $table->integer('id_usuario');
             $table->integer('id_posicion');
-            $table->foreign('id_posicion')->references('id_posicion')->on('posiciones');
+            $table->string('latitud');
+            $table->string('longitud');
 
             $table->primary('id_usuario');
         });

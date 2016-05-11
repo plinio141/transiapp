@@ -15,6 +15,7 @@ Route::auth();
 Route::get('/', function () {
     return view('inicioSesion');
 });
+Route::get('logout','IniciarSesion@logout');
 Route::get('addRuta','Vistas@addRuta');
 Route::get('editRuta','Vistas@editRuta');
 Route::get('showRuta','Vistas@showRuta');
@@ -23,15 +24,21 @@ Route::get('editBus','Vistas@editBus');
 Route::get('showBus','Vistas@showBus');
 Route::get('addAdministrador','Vistas@addAdministrador');
 Route::get('addEmpresa','Vistas@addEmpresa');
+Route::get('addLugar','Vistas@addLugar');
+Route::get('addSitioEstrategico','Vistas@addSitioEstrategico');
+
+
 
 Route::resource('iniciarSesion','IniciarSesion');
-Route::get('logout','IniciarSesion@logout');
 Route::resource('ruta','AdminRuta');
 Route::resource('lugar','Lugares');
 Route::resource('rutalugar','rutalugar');
 Route::resource('empresa','AdminEmpresa');
 Route::resource('administrador','AdminAdministrador');
 Route::resource('bus','AdminBus');
+Route::resource('lugar','AdminLugar');
+Route::resource('sitioEstrategico','AdminSitioEstrategico');
+
 
 
 

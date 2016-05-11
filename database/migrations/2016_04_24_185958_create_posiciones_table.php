@@ -12,13 +12,13 @@ class CreatePosicionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Posiciones', function (Blueprint $table) {
-            $table->integer('id_posicion');
-            $table->string('nombre_posicion')->unique();
+        Schema::create('Lugares', function (Blueprint $table) {
+            $table->integer('id_lugar');
+            $table->string('nombre_lugar')->unique();
             $table->string('latitud');
             $table->string('longitud');
             
-            $table->primary('id_posicion');
+            $table->primary('id_lugar');
         });
     }
 
@@ -29,6 +29,6 @@ class CreatePosicionesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Posiciones');
+        Schema::drop('Lugares');
     }
 }

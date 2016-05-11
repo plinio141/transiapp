@@ -10,17 +10,21 @@
     </div>
     @endif 
         {!! Form::open(['route' => 'bus.store','method' => 'post', 'class'=>'form-login ']) !!}
+        	<div class="form-group">
+	        {!! Form::label('id_bus', 'Identificador interno del bus *')!!}
+	        {!! Form::number('id_bus','{{ bus->id_bus }}',['class'=>'form-control', 'required' ]);!!}
+	    	</div>
 	        <div class="form-group">
 	        {!! Form::label('placa', 'Placa del bus *')!!}
 	        {!! Form::text('placa','',['class'=>'form-control', 'required' ]);!!}
 	    	</div>
 	    	<div class="form-group">
 	        {!! Form::label('capacidad', 'Capacidad del bus *')!!}
-	        {!! Form::number('capacidad','',['class'=>'form-control', 'required' ]);!!}
+	        {!! Form::number('capacidad','{{ bus->capacidad}}',['class'=>'form-control', 'required' ]);!!}
 	    	</div>
 	        <div class="form-group">
 	        {!! Form::label('id_gps', 'Id de GPS con el que cuenta *')!!}
-	        {!! Form::number('id_gps','',['class'=>'form-control', 'required' ]);!!}
+	        {!! Form::number('id_gps','{{ bus->id_gps}}',['class'=>'form-control', 'required' ]);!!}
 	        </div>
 	        <div class="form-group asignar-bus">
 	        {!! Form::label('asignar', 'Asignar Bus*')!!}
@@ -29,12 +33,6 @@
 				  <option value="{{  $ruta->nombre_ruta }}">{{  $ruta->nombre_ruta }}</option>
 				@endforeach
 			</select>
-	        </div>
-	        <div class="form-group">
-	        	<div class="check">
-			        {!!Form::checkbox('activa', 'value',[ 'required' ]);!!}
-			        {!! Form::label('bus-activo', 'El bus esta activo? *')!!}
-		        </div>
 	        </div>
 	        <div class="form-group group-button">
 		        <button class="guardar" type="submit"><img src="images/guardar.png"></button>

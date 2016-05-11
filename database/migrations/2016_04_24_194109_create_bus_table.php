@@ -13,14 +13,16 @@ class CreateBusTable extends Migration
     public function up()
     {
         Schema::create('Buses', function (Blueprint $table) {
+            $table->integer('id_bus');
             $table->string('placa');
-            $table->integer('id_posicion');
-            $table->foreign('id_posicion')->references('id_posicion')->on('posiciones');
             $table->integer('capacidad');
             $table->integer('id_gps');
+            $table->string('latitud');
+            $table->string('longitud');
             $table->string('estado');
+            $table->date('updated_at');
             
-            $table->primary('placa');
+            $table->primary('id_bus');
         });
     }
 

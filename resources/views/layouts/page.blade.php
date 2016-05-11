@@ -4,9 +4,8 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-
-
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--{{ Html::style('css/bootstrap.css') }}-->
+{{ Html::style('css/style.css') }}
 
     <head>
         <title>Transi-app</title>
@@ -15,9 +14,9 @@
        <header>
 	       <div>
 		       	<ul class="header">
-		       		<li><img class="logo-empresa" src="images/devmov5.png"></li>
+		       		<li>{{ Html::image('images/devmov5.png', "", array('class'=>'logo-empresa')) }}</li>
 		       		<li class="title">{{ $title }}</li>
-		       		<li><img class="logo-app" src="images/Transiapp.png"></li>
+		       		<li>{{ Html::image('images/Transiapp.png', "", array('class'=>'logo-app')) }}</li>
 		       	</ul>
 	       	</div>
        </header>
@@ -27,11 +26,14 @@
               @if(Auth::user()->id==1)
               <li>{!! link_to('addEmpresa', $title = 'Añadir Empresa', $attributes = array(), $secure = null); !!}</li>
               <li>{!! link_to('addAdministrador', $title = 'Añadir Administrador', $attributes = array(), $secure = null); !!}</li>
-              @endif
+              <li>{!! link_to('addLugar', $title = 'Agregar Lugar', $attributes = array(), $secure = null); !!}</li>
+              <li>{!! link_to('addSitioEstrategico', $title = 'Agregar Sitio Estrategico', $attributes = array(), $secure = null); !!}</li>
+              @else
        				<li>{!! link_to('addRuta', $title = 'Añadir Ruta', $attributes = array(), $secure = null); !!}</li>
               <li>{!! link_to('addBus', $title = 'Añadir Bus', $attributes = array(), $secure = null); !!}</li>
               <li>{!! link_to('showRuta', $title = 'Ver Rutas', $attributes = array(), $secure = null); !!}</li>
               <li>{!! link_to('showBus', $title = 'Ver Buses', $attributes = array(), $secure = null); !!}</li>
+              @endif
        			</ul>
        		</div>
        		<div class="content">

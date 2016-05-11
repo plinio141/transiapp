@@ -24,6 +24,7 @@ class AddBusRequest extends Request
     public function rules()
     {
         return [
+            'id_bus' => 'required|unique:buses',
             'placa' => 'required|unique:buses',
             'ruta' => 'required',
             'id_gps' => 'required|unique:buses',

@@ -14,13 +14,12 @@ class CreateRodamientoTable extends Migration
     {
         Schema::create('Rodamientos', function (Blueprint $table) {
             $table->date('fecha_salida');
-            $table->string('placa'); 
-            $table->foreign('placa')->references('placa')->on('buses');
+            $table->integer('id_bus'); 
+            $table->foreign('id_bus')->references('id_bus')->on('buses');
             $table->integer('id_ruta'); 
             $table->foreign('id_ruta')->references('id_ruta')->on('rutas');
         });
     }
-
     /**
      * Reverse the migrations.
      *

@@ -98,4 +98,19 @@ class Vistas extends Controller
 		);
 		return view('addEmpresa',$data);
 	}
+	public function addLugar()
+	{
+		$data = array(
+		    "title" => "Agregar Lugar",
+		);
+		return view('addLugar',$data);
+	}
+	public function addSitioEstrategico()
+	{
+		$data = array(
+		    "title" => "Agregar Sitio Estrategico",
+		    "rutas" => Ruta::all(),
+		);
+		return view('addSitioEstrategico',$data);
+	}
 }

@@ -17,7 +17,7 @@ class AdminEmpresa extends Controller
 
 	public function index()
 	{
-		# code...
+		
 	}
     public function store(AddEmpresaRequest $request)
 	{

@@ -10,13 +10,13 @@ use App\Http\Requests\AddAministradorRequest;
 
 use App\Administrador;
 
-use App\Relevo;
-
 use App\Empresa;
 
 use Redirect;
 
 use Carbon\Carbon;
+
+use App\Contratacion;
 
 class AdminAdministrador extends Controller
 {
@@ -35,8 +35,8 @@ class AdminAdministrador extends Controller
 		Administrador::insert(['id' => $id, 'name'=> $nombre, 'password'=> $password, 'nombre_administrador'=> $nombre_administrador,'apellido_administrador'=> $apellido_administrador]);
 		$fecha=Carbon::now();
 		$empresa=$request->input('empresa');
-		$id_empresa=Empresa::where('nombre_empresa',$empresa)->first()->ID_EMPRESA;
-		Relevo::insert(['id_administrador' => $id, 'id_empresa'=> $id_empresa, 'fecha_relevo'=> $fecha]);
+		$id_empresa=Empresa::where('nombre_empresa',$empresa)->first()->id_empresa;
+		Contratacion::insert(['id_administrador' => $id, 'id_empresa'=> $id_empresa, 'fecha_contratacion'=> $fecha]);
 
 		return Redirect::to('addAdministrador')->with('message','store');
 

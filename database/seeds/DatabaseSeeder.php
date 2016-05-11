@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         'id' =>1,
         'name'=>'admin',
         'password' => bcrypt('1234'),
-        'nombre_admistrador' => 'admin',
+        'nombre_administrador' => 'admin',
         'apellido_administrador' => 'admin',
      ]);
     }

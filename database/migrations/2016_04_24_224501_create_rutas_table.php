@@ -24,7 +24,8 @@ class CreateRutasTable extends Migration
             $table->integer('tarifa');
             $table->string('descripcion');
             $table->boolean('activa');
-            
+            $table->date('updated_at');
+
             $table->primary('id_ruta');
         });
     }
